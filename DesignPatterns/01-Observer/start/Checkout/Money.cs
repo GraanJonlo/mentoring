@@ -39,9 +39,9 @@ namespace Checkout
             return !left.Equals(right);
         }
 
-        public static Money operator +(Money l, Money r)
+        public static Money operator +(Money left, Money right)
         {
-            return new Money(l._value + r._value);
+            return new Money(left._value + right._value);
         } 
     }
 }

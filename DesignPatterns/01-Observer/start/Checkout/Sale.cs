@@ -13,7 +13,7 @@
 
         public void Add(Sku s)
         {
-            var p = _prices.PriceFor(s);
+            Money p = _prices.PriceFor(s);
             _creditAccount.Add(new Transaction(s.ToString(), p));
         }
     }

@@ -7,7 +7,7 @@ namespace Checkout
     {
         private readonly List<Transaction> _transactions;
 
-        public Account(Money initialBalance)
+        private Account(Money initialBalance)
         {
             _transactions = new List<Transaction> {new Transaction("Initial balance", initialBalance)};
         }
@@ -20,6 +20,11 @@ namespace Checkout
         public Money Balance()
         {
             return _transactions.Select(t => t.Value).Aggregate(new Money(0m), (l, r) => l + r);
+        }
+
+        public static Account WithInitialBalance(Money initialBalance)
+        {
+            return new Account(initialBalance);
         }
     }
 }
