@@ -4,22 +4,19 @@ namespace Checkout
 {
     public struct Transaction : IEquatable<Transaction>
     {
-        private readonly string _reference;
+        public readonly string Reference;
         public readonly Money Value;
-
-        private readonly int _hashCode;
 
         public Transaction(string reference, Money value)
         {
-            _reference = reference;
+            Reference = reference;
             Value = value;
-
-            _hashCode = ((reference?.GetHashCode() ?? 0) * 397) ^ value.GetHashCode();
         }
 
         public bool Equals(Transaction other)
         {
-            return string.Equals(_reference, other._reference) && Value.Equals(other.Value);
+            return string.Equals(Reference, other.Reference, StringComparison.InvariantCultureIgnoreCase) &&
+                   Value.Equals(other.Value);
         }
 
         public override bool Equals(object obj)
@@ -30,7 +27,10 @@ namespace Checkout
 
         public override int GetHashCode()
         {
-            return _hashCode;
+            unchecked
+            {
+                return (StringComparer.InvariantCultureIgnoreCase.GetHashCode(Reference) * 397) ^ Value.GetHashCode();
+            }
         }
 
         public static bool operator ==(Transaction left, Transaction right)

@@ -15,11 +15,11 @@ namespace Tests
             A.CallTo(() => prices.PriceFor(a)).Returns(new Money(0.5m));
             A.CallTo(() => prices.PriceFor(b)).Returns(new Money(0.45m));
 
-            var account = Account.WithInitialBalance(new Money(0m));
+            IAccount account = FakeAccount.WithInitialBalance(new Money(0m));
             var sale = new Sale(prices, account);
 
-            sale.Add(a);
-            sale.Add(b);
+            sale.AddItem(a);
+            sale.AddItem(b);
 
             Assert.Equal(new Money(0.95m), account.Balance());
         }

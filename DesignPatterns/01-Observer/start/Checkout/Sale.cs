@@ -3,18 +3,18 @@
     public class Sale
     {
         private readonly IPrices _prices;
-        private readonly Account _creditAccount;
+        private readonly IAccount _account;
 
-        public Sale(IPrices prices, Account creditAccount)
+        public Sale(IPrices prices, IAccount account)
         {
             _prices = prices;
-            _creditAccount = creditAccount;
+            _account = account;
         }
 
-        public void Add(Sku s)
+        public void AddItem(Sku s)
         {
             Money p = _prices.PriceFor(s);
-            _creditAccount.Add(new Transaction(s.ToString(), p));
+            _account.Sold(s, p);
         }
     }
 }
