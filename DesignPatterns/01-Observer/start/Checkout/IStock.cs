@@ -2,6 +2,6 @@
 {
     public interface IStock
     {
-        void Sold(Sku s);
+        void Sold(Sku s, Money m);
     }
 }

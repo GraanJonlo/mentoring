@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Checkout;
 
 namespace Tests
@@ -18,9 +17,9 @@ namespace Tests
             return new FakeStock(stockLevels);
         }
 
-        public void Sold(Sku s)
+        public void Sold(Sku s, Money m)
         {
-            _stockLevels[s] = _stockLevels[s] - 1;
+            _stockLevels[s]--;
         }
 
         public int RemainingFor(Sku s)
