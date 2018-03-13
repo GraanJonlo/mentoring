@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WidgetOrdering", "WidgetOrdering\WidgetOrdering.csproj", "{5C70DCF9-7112-4DBC-BA82-00406DE2007A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C70DCF9-7112-4DBC-BA82-00406DE2007A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C70DCF9-7112-4DBC-BA82-00406DE2007A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C70DCF9-7112-4DBC-BA82-00406DE2007A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C70DCF9-7112-4DBC-BA82-00406DE2007A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{257F6C28-EDC4-4567-9D5D-A06AD225393E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{257F6C28-EDC4-4567-9D5D-A06AD225393E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{257F6C28-EDC4-4567-9D5D-A06AD225393E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{257F6C28-EDC4-4567-9D5D-A06AD225393E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {916330EC-0590-4160-8C95-23A6F4989382}
+	EndGlobalSection
+EndGlobal
