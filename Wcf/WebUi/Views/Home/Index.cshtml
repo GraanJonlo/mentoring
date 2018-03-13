@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<h2>Order</h2>
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { id = "order" }))
+{
+    <label for="customerName">Customer name:</label>
+    <input type="text" id="customerName" name="customerName" />
+    <h3>Billing Address</h3>
+    <div>
+        <label for="billingAddress.address1">Address line 1:</label>
+        <input type="text" id="billingAddress.address1" name="billingAddress.address1" />
+    </div>
+    <div>
+        <label for="billingAddress.address2">Address line 2:</label>
+        <input type="text" id="billingAddress.address2" name="billingAddress.address2" />
+    </div>
+    <div>
+        <label for="billingAddress.city">City:</label>
+        <input type="text" id="billingAddress.city" name="billingAddress.city" />
+    </div>
+    <div>
+        <label for="billingAddress.county">County:</label>
+        <input type="text" id="billingAddress.county" name="billingAddress.county" />
+    </div>
+    <div>
+        <label for="billingAddress.postcode">Postcode:</label>
+        <input type="text" id="billingAddress.postcode" name="billingAddress.postcode" />
+    </div>
+    <h3>Shipping Address</h3>
+    <div>
+        <label for="shippingAddress.address1">Address line 1:</label>
+        <input type="text" id="shippingAddress.address1" name="shippingAddress.address1" />
+    </div>
+    <div>
+        <label for="shippingAddress.address2">Address line 2:</label>
+        <input type="text" id="shippingAddress.address2" name="shippingAddress.address2" />
+    </div>
+    <div>
+        <label for="shippingAddress.city">City:</label>
+        <input type="text" id="shippingAddress.city" name="shippingAddress.city" />
+    </div>
+    <div>
+        <label for="shippingAddress.county">County:</label>
+        <input type="text" id="shippingAddress.county" name="shippingAddress.county" />
+    </div>
+    <div>
+        <label for="shippingAddress.postcode">Postcode:</label>
+        <input type="text" id="shippingAddress.postcode" name="shippingAddress.postcode" />
+    </div>
+    <h3>Items</h3>
+    <div>
+        <label for="orderLines[0].productCode">Product code:</label>
+        <input type="text" id="orderLines[0].productCode" name="orderLines[0].productCode" />
+        <label for="orderLines[0].quantity">Quantity:</label>
+        <input type="text" id="orderLines[0].quantity" name="orderLines[0].quantity" />
+    </div>
+    <div>
+        <input type="submit" />
+    </div>
+}
